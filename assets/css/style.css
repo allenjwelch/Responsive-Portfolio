@@ -6,10 +6,6 @@
     font-family: 'Georgia', Times, 'Times New Roman', serif;
 }
 
-/* html {
-    position: relative; 
-} */
-
 h1 {
     color: white; 
     font-size: 30px; 
@@ -80,7 +76,7 @@ header {
     display: table-cell; 
     vertical-align: middle; 
     text-decoration: none;
-    width: 100px;
+    width: 75px;
     height: 60px;
     list-style-type: none;
 }
@@ -103,7 +99,6 @@ header {
     font-size: 18px; 
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: absolute;
     top: 0;
@@ -112,7 +107,6 @@ header {
     visibility: hidden;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -122,9 +116,6 @@ header {
     z-index: 2;
 }
 
-
-
-/* Links inside the dropdown */
 .dropdown-content li a {
     color: black;
     padding: 10px 10px;
@@ -137,18 +128,18 @@ header {
     right: 0;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #4aaaa5;
     color: white; 
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
     right: 0;
 }
 
+
+/* CONTENT */
 body {
     position: relative; 
     z-index: 1;
@@ -162,6 +153,7 @@ body {
     color: #777777; 
     background-image: url("../images/cork-wallet.png");
     z-index: 1;
+    min-height: 550px;
 }
 
 footer {
@@ -178,10 +170,10 @@ footer {
 }
 
 #side_bar {
-    height: 200px;
-    width: 270px;
+    height: 150px;
+    width: 30%;
     background-color: #ffffff; 
-    margin: 20px 10px 20px 10%; 
+    margin: 20px 5%; 
     padding: 10px;
     float: left; 
     text-align: center; 
@@ -207,7 +199,7 @@ footer {
 /* ABOUT PAGE */
 #about {
     height: 400px;
-    width: 650px;
+    width: 45%;
     background-color: #ffffff; 
     margin: 20px 10px 20px 10%; 
     float: left; 
@@ -231,8 +223,8 @@ footer {
 
 /* PORTFOLIO PAGE */
 #portfolio {
-    height: 800px;
-    width: 650px;
+    height: 100%;
+    width: 45%;
     background-color: #ffffff; 
     margin: 20px 10px 20px 10%; 
     float: left; 
@@ -241,41 +233,44 @@ footer {
 }
 
 .portfolio_img {
-    height: 198px;
-    width: 198px;
+    height: 178px;
+    width: 178px;
     z-index: 1;
 }
 
 .portfolio_banner {
     height: 40px; 
-    width: 200px;
+    width: 180px;
     /* opacity: .9;  */
     display: block; 
     padding: 5px;
     background-color: #4aaaa5;
     color: white; 
-    font-size: 15px;
     text-align: center; 
     z-index: 2;
     position: absolute; 
     bottom: 15px; 
 }
 
+.portfolio_banner h3 {
+    font-size: 18px; 
+}
+
 #portfolio_box {
-    height: 200px;
-    width: 200px;
+    height: 180;
+    width: 180;
     float: left; 
     position: relative; 
     bottom: -10px; 
     box-shadow: 5px 5px 10px #4aaaa5;
-    margin: 20px 50px; 
+    margin: 20px 5%; 
 }
 
 
 /* CONTACT PAGE */
 #contact {
     height: 450px;
-    width: 650px;
+    width: 45%;
     background-color: #ffffff; 
     margin: 20px 10px 20px 10%; 
     float: left; 
@@ -303,7 +298,7 @@ input[type="email"] {
 }
 
 textarea {
-    width: 600px;
+    width: 100%;
     height: 200px;
     resize: none; 
 }
@@ -325,17 +320,64 @@ input[type="submit"]:hover {
 
 /* Desktop Layout */
 @media screen and (max-width: 980px) {
-    
+    #about {
+        width: 45%; 
+        height: 100%;
+        margin: 20px 10px 20px 10%; 
 }
+
+    #side_bar {
+        margin: 20px 20px; 
+    }
+
+    .connect_img {
+        margin: 10px 5px; 
+        height: 50px;
+        width: 50px;
+    }
+
+    #profile_img {
+        height: 290px;
+        width: 250px;
+        margin: 15px 12% 15px 12%;
+    }
+
+    #portfolio {
+        width: 45%; 
+        height: 100%;
+        margin: 0;
+        clear: both;
+        padding: 10px;
+        margin: 20px 10px 20px 10%; 
+    }
+
+    #portfolio_box {
+        height: 200px;
+        width: 220px;
+        float: left; 
+        position: relative; 
+        margin: 20px 20%; 
+    }
+
+    .portfolio_img {
+        height: 198px;
+        width: 218px;
+    }
+        
+    .portfolio_banner {
+        height: 40px; 
+        width: 220px;
+    }
+
+    .portfolio_banner h3 {
+        font-size: 18px; 
+        font-weight: bold; 
+        line-height: 1.6; 
+    }
 
 /* Tablet Layout */
 @media screen and (max-width: 768px) {
-    .dropdown {
-        visibility: visible;
-    }
-    .nav {
-        visibility: hidden; 
-    }
+
 
     #about {
         width: 100%; 
@@ -344,35 +386,38 @@ input[type="submit"]:hover {
         clear: both;
     }
 
+    #profile_img {
+        margin: 15px 5%;
+    }
+
     #side_bar {
         clear: both; 
-        margin: 15px auto; 
+        margin: 15px 20%; 
+        width: 60%;
+        
     }
 
     #portfolio {
         width: 100%; 
-        height: 100%;
-        margin: 0;
-        clear: both;
-        padding: 10px;
+         margin: 20px 1%;
     }
 
     #portfolio_box {
-        height: 180px;
-        width: 180px;
+        height: 200px;
+        width: 220px;
         float: left; 
         position: relative; 
-        margin: 20px 20px; 
+        margin: 20px 6%; 
     }
 
     .portfolio_img {
-        height: 178px;
-        width: 178px;
+        height: 198px;
+        width: 218px;
     }
         
     .portfolio_banner {
         height: 40px; 
-        width: 180px;
+        width: 220px;
     }
 
     .portfolio_banner h3 {
@@ -390,7 +435,6 @@ input[type="submit"]:hover {
     }
 
     textarea {
-        width: 550px;
         height: 150px;
     }
 
@@ -399,16 +443,40 @@ input[type="submit"]:hover {
 
 /* Phone (landscape) Layout */
 @media screen and (max-width: 640px) {
-    .dropdown {
+
+    /* .dropdown {
         visibility: visible;
+    } */
+
+    .nav {
+        display: block;
+        margin: 0; 
+
+    }
+
+    .nav ul {
+
+    }
+
+    .nav li {
+        display: block;
+        width: 33.3%;
+
+    }
+
+    .nav li a {
+        width: 33%;
+        padding: 0; 
     }
 
     header {
         position: static; 
+        height: 100px;
     }
 
-    .nav {
-        visibility: hidden; 
+    #title {
+        width: 100%;
+        margin: 0;
     }
 
     #about {
@@ -429,31 +497,24 @@ input[type="submit"]:hover {
     }
 
     #portfolio_box {
-        height: 150px;
-        width: 150px;
-        float: left; 
+        height: 240px;
+        width: 240px;
+        clear: both; 
         position: relative; 
-        margin: 20px 20px; 
+        margin: 20px 20%; 
     }
 
     .portfolio_img {
-        height: 148px;
-        width: 148px;
+        height: 238px;
+        width: 238px;
     }
         
     .portfolio_banner {
-        height: 35px; 
-        width: 150px;
-    }
-
-    .portfolio_banner h3 {
-        font-size: 15px; 
-        font-weight: bold; 
-        line-height: 1.6; 
+        height: 40px; 
+        width: 240px;
     }
 
     textarea {
-        width: 400px;
         height: 150px;
     }
 
@@ -498,7 +559,6 @@ input[type="submit"]:hover {
 
 
     textarea {
-        width: 350px;
         height: 150px;
     }
 }
