@@ -79,6 +79,9 @@ header {
     width: 75px;
     height: 60px;
     list-style-type: none;
+    color: #777777; 
+    font-family: Arial, Helvetica, sans-serif
+
 }
 
 .nav li a:hover {
@@ -198,7 +201,7 @@ footer {
 
 /* ABOUT PAGE */
 #about {
-    height: 400px;
+    height: 100%;
     width: 45%;
     background-color: #ffffff; 
     margin: 20px 10px 20px 10%; 
@@ -466,7 +469,8 @@ input[type="submit"]:hover {
 
     .nav li a {
         width: 33%;
-        padding: 0; 
+        padding: 10px; 
+        line-height: 1.8; 
     }
 
     header {
@@ -497,21 +501,26 @@ input[type="submit"]:hover {
     }
 
     #portfolio_box {
-        height: 240px;
-        width: 240px;
+        height: 300px;
+        width: 300px;
         clear: both; 
         position: relative; 
-        margin: 20px 20%; 
+        margin: 20px 25% 20px 5%; 
     }
 
     .portfolio_img {
-        height: 238px;
-        width: 238px;
+        height: 298px;
+        width: 298px;
     }
         
     .portfolio_banner {
         height: 40px; 
-        width: 240px;
+        width: 300px;
+        padding: 0px;
+    }
+
+    .portfolio_banner h3 {
+        font-size: 24px; 
     }
 
     textarea {
@@ -523,18 +532,21 @@ input[type="submit"]:hover {
 @media screen and (max-width: 450px) {
     
     #profile_img {
+        display:block; 
         margin: 15px 15% 15px 10%; 
+        clear: both; 
     }
 
     #about p {
         display:block; 
+        clear: both; 
     }
 
     #side_bar {
         margin: 15px 80px; 
     }
 
-    #portfolio_box {
+    /* #portfolio_box {
         height: 140px;
         width: 140px;
         margin: 20px 15px; 
@@ -554,7 +566,7 @@ input[type="submit"]:hover {
         font-size: 14px; 
         font-weight: bold; 
         line-height: 1.6; 
-    }
+    } */
 
 
 
